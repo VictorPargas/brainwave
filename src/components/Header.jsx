@@ -6,6 +6,7 @@ import { navigation } from "../constants";
 import Button from "./Button";
 import MenuSvg from "../assets/svg/MenuSvg";
 import { HamburgerMenu } from "./design/Header";
+import logo from "../assets/b1softSymbol.png";
 
 const Header = () => {
   const { pathname } = useLocation();
@@ -51,12 +52,7 @@ const Header = () => {
     >
       <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
         <a className="block w-[15rem] xl:mr-8 ml-auto" href="#hero">
-          <img
-            src="./src/assets/b1softSymbol.png"
-            width={120}
-            height={50}
-            alt=""
-          />
+          <img src={logo} width={120} height={50} alt="" />
         </a>
 
         <nav
