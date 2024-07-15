@@ -1,16 +1,29 @@
-import { brainwaveSymbol, check } from "../assets";
+import { check } from "../assets";
 import { collabApps, collabContent, collabText } from "../constants";
 import Button from "./Button";
 import Section from "./Section";
 import { LeftCurve, RightCurve } from "./design/Collaboration";
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 
 const Collaboration = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
   return (
-    <Section crosses>
+    <Section crosses id="colab">
       <div className="container lg:flex">
-        <div className="max-w-[25rem]">
+        <motion.div
+          className="max-w-[25rem]"
+          initial={{ opacity: 0, x: -50 }}
+          animate={inView ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: 0.6 }}
+          ref={ref}
+        >
           <h2 className="h2 mb-4 md:mb-8">
-            AI Chat App for seamless collaboration
+            Integre seu SAP Business One de Forma Eficiente!
           </h2>
 
           <ul className="max-w-[22rem] mb-10 md:mb-14">
@@ -27,10 +40,15 @@ const Collaboration = () => {
             ))}
           </ul>
 
-          <Button>Try it now</Button>
-        </div>
+          <Button>Saiba Mais</Button>
+        </motion.div>
 
-        <div className="lg:ml-auto xl:w-[38rem] mt-4">
+        <motion.div
+          className="lg:ml-auto xl:w-[38rem] mt-4"
+          initial={{ opacity: 0, x: 50 }}
+          animate={inView ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: 0.6 }}
+        >
           <p className="body-2 mb-8 text-n-4 md:mb-16 lg:mb-32 lg:w-[22rem] lg:mx-auto">
             {collabText}
           </p>
@@ -40,10 +58,10 @@ const Collaboration = () => {
               <div className="w-[6rem] aspect-square m-auto p-[0.2rem] bg-conic-gradient rounded-full">
                 <div className="flex items-center justify-center w-full h-full bg-n-8 rounded-full">
                   <img
-                    src={brainwaveSymbol}
-                    width={48}
-                    height={48}
-                    alt="brainwave"
+                    src="./src/assets/b1softSymbol.png"
+                    width={78}
+                    height={58}
+                    alt="B1soft"
                   />
                 </div>
               </div>
@@ -60,7 +78,7 @@ const Collaboration = () => {
                   <div
                     className={`relative -top-[1.6rem] flex w-[3.2rem] h-[3.2rem] bg-n-7 border border-n-1/15 rounded-xl -rotate-${
                       index * 45
-                    }`}
+                    } hover:bg-n-6 transition-colors duration-300`}
                   >
                     <img
                       className="m-auto"
@@ -77,7 +95,7 @@ const Collaboration = () => {
             <LeftCurve />
             <RightCurve />
           </div>
-        </div>
+        </motion.div>
       </div>
     </Section>
   );
