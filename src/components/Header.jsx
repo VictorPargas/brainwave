@@ -55,7 +55,7 @@ const Header = () => {
             src="./src/assets/b1softSymbol.png"
             width={120}
             height={50}
-            alt="Brainwave"
+            alt=""
           />
         </a>
 
