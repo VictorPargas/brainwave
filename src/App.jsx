@@ -3,6 +3,7 @@ import Benefits from "./components/Benefits";
 import ChatModal from "./components/ChatModal";
 import Collaboration from "./components/Collaboration";
 import ContactForm from "./components/ContactForm";
+import FloatingWhatsApp from "./components/FloatingWhatsApp";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
@@ -22,6 +23,7 @@ const App = () => {
         <Roadmap />
         <ContactForm />
         <Footer />
+        <FloatingWhatsApp />
       </div>
 
       <ButtonGradient />
