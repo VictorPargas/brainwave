@@ -38,7 +38,7 @@ const Hero = () => {
           transition={{ duration: 0.6 }}
         >
           <h1 className="h1 mb-6 text-white drop-shadow-md">
-            Integre e otimize seu ERP One com a{" "}
+            Integre e otimize seu SAP Business One com a{" "}
             <span className="inline-block relative">
               b1Soft{" "}
               <img

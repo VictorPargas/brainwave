@@ -238,7 +238,7 @@ export const benefits = [
   {
     id: "0",
     title: "Agronegócio",
-    text: "impulsione a eficiência e a produtividade no agronegócio, integrando processos, otimizando operações e fornecendo insights valiosos para uma gestão sustentável e lucrativa.",
+    text: "Impulsione a eficiência e a produtividade no agronegócio, integrando processos, otimizando operações e fornecendo insights valiosos para uma gestão sustentável e lucrativa.",
     backgroundUrl: "./src/assets/benefits/card-1.svg",
     iconUrl: benefitIcon1,
     imageUrl: benefitImage2,
@@ -246,7 +246,7 @@ export const benefits = [
   {
     id: "1",
     title: "Distribuição e Logística",
-    text: "Explore como o SAP Business One otimiza a distribuição e logística, oferecendo soluções integradas que aumentam a eficiência operacional, reduzem custos e proporcionam visibilidade em tempo real para uma cadeia de suprimentos ágil e responsiva.",
+    text: "Otimize a distribuição e logística com soluções integradas que aumentam a eficiência operacional, reduzem custos e proporcionam visibilidade em tempo real para uma cadeia de suprimentos ágil e responsiva.",
     backgroundUrl: "./src/assets/benefits/card-2.svg",
     iconUrl: benefitIcon2,
     imageUrl: benefitImage2,
@@ -255,7 +255,7 @@ export const benefits = [
   {
     id: "2",
     title: "Energia",
-    text: "Transforme sua empresa de energia com o SAP Business One, aproveitando soluções avançadas para melhorar a eficiência, gerenciar recursos de forma inteligente e impulsionar o crescimento em um setor em constante evolução.",
+    text: "Transforme sua empresa de energia aproveitando soluções avançadas para melhorar a eficiência, gerenciar recursos de forma inteligente e impulsionar o crescimento em um setor em constante evolução.",
     backgroundUrl: "./src/assets/benefits/card-3.svg",
     iconUrl: benefitIcon3,
     imageUrl: benefitImage2,
@@ -263,7 +263,7 @@ export const benefits = [
   {
     id: "3",
     title: "Indústrias e Manufatura",
-    text: "Otimize sua produção e operações industriais com o SAP Business One. Integre processos, melhore a eficiência e impulsione o crescimento em sua indústria ou manufatura.",
+    text: "Otimize sua produção e operações industriais. Integre processos, melhore a eficiência e impulsione o crescimento em sua indústria ou manufatura.",
     backgroundUrl: "./src/assets/benefits/card-4.svg",
     iconUrl: benefitIcon4,
     imageUrl: benefitImage2,
@@ -272,7 +272,7 @@ export const benefits = [
   {
     id: "4",
     title: "Prestação de Serviços",
-    text: "Potencialize a qualidade dos serviços da sua empresa com o SAP Business One. Simplifique a gestão, melhore a eficiência e entregue resultados superiores aos seus clientes.",
+    text: "Potencialize a qualidade dos serviços da sua empresa. Simplifique a gestão, melhore a eficiência e entregue resultados superiores aos seus clientes.",
     backgroundUrl: "./src/assets/benefits/card-5.svg",
     iconUrl: benefitIcon1,
     imageUrl: benefitImage2,
@@ -286,6 +286,7 @@ export const benefits = [
     imageUrl: benefitImage2,
   },
 ];
+
 
 
 export const socials = [

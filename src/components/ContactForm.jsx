@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Section from "./Section";
 import { Gradient } from "./design/Roadmap";
+import emailjs from 'emailjs-com';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -16,6 +17,8 @@ const ContactForm = () => {
   });
 
   const [errors, setErrors] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [successMessage, setSuccessMessage] = useState("");
 
   const handleChange = (e) => {
     const { id, value, type, checked } = e.target;
@@ -35,19 +38,25 @@ const ContactForm = () => {
     if (!formData.company) newErrors.company = "Nome da empresa é obrigatório";
     if (!formData.region) newErrors.region = "País/Região é obrigatório";
     if (!formData.position) newErrors.position = "Cargo é obrigatório";
-    if (!formData.department)
-      newErrors.department = "Departamento é obrigatório";
+    if (!formData.department) newErrors.department = "Departamento é obrigatório";
     if (!formData.consent) newErrors.consent = "Consentimento é obrigatório";
 
     return newErrors;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const formErrors = validateForm();
     if (Object.keys(formErrors).length === 0) {
       // Formulário válido, prossiga com o envio
-      console.log("Formulário enviado com sucesso:", formData);
+      setIsSubmitting(true);
+      try {
+        await emailjs.send('service_rgtlq1s', 'template_ck3zk78', formData, 'tuNveNmEJZxmHaBSG');
+        setSuccessMessage("Formulário enviado com sucesso!");
+      } catch (error) {
+        console.error("Erro ao enviar o email:", error);
+      }
+      setIsSubmitting(false);
     } else {
       setErrors(formErrors);
     }
@@ -267,11 +276,15 @@ const ContactForm = () => {
             <button
               className="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               type="submit"
+              disabled={isSubmitting}
             >
-              Enviar
+              {isSubmitting ? "Enviando..." : "Enviar"}
             </button>
           </div>
         </form>
+        {successMessage && (
+          <div className="text-center text-green-500 mt-6">{successMessage}</div>
+        )}
       </div>
       <Gradient />
     </Section>
