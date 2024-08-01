@@ -238,7 +238,7 @@ export const benefits = [
   {
     id: "0",
     title: "Agronegócio",
-    text: "Descubra como o SAP Business One impulsiona a eficiência e a produtividade no agronegócio, integrando processos, otimizando operações e fornecendo insights valiosos para uma gestão sustentável e lucrativa.",
+    text: "impulsione a eficiência e a produtividade no agronegócio, integrando processos, otimizando operações e fornecendo insights valiosos para uma gestão sustentável e lucrativa.",
     backgroundUrl: "./src/assets/benefits/card-1.svg",
     iconUrl: benefitIcon1,
     imageUrl: benefitImage2,
